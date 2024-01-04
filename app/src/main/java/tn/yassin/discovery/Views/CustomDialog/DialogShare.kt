@@ -39,7 +39,7 @@ class DialogShare {
         val SnapChatShare = view.findViewById<ImageView>(R.id.SnapChatShare) as? ImageView
         val TelegramShare = view.findViewById<ImageView>(R.id.TelegramShare) as? ImageView
         val EmailShare = view.findViewById<ImageView>(R.id.EmailShare) as? ImageView
-        val DiscordShare = view.findViewById<ImageView>(R.id.DiscordShare) as? ImageView
+//        val DiscordShare = view.findViewById<ImageView>(R.id.DiscordShare) as? ImageView
 
         val InstagramShare = view.findViewById<ImageView>(R.id.InstagramShare) as? ImageView
         val btnCloseShare = view.findViewById<TextView>(R.id.btnCloseShare) as? TextView
@@ -81,9 +81,9 @@ class DialogShare {
             ReadyFunction.ShareIt(FinalImage!!,context,"com.google.android.gm")
         }
         /////
-        DiscordShare?.setOnClickListener {
-            ReadyFunction.ShareIt(FinalImage!!,context,"com.discord")
-        }
+//        DiscordShare?.setOnClickListener {
+//            ReadyFunction.ShareIt(FinalImage!!,context,"com.discord")
+//        }
         /////
         btnCloseShare?.setOnClickListener {
             dialog.dismiss()

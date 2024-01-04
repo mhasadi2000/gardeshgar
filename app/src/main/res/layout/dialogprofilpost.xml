@@ -55,7 +55,7 @@
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
             app:setMaxZoom="10"
-            app:srcCompat="@drawable/img_beach"
+            app:srcCompat="@drawable/waiting"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <RelativeLayout

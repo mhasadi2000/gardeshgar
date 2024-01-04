@@ -47,13 +47,13 @@ class ExploreFragmenttodo : Fragment() {
     //
     var PostsModels: ArrayList<PostsAdmin> = ArrayList()
     //
-    lateinit var shimmer_exploreDesert : ShimmerFrameLayout
-    lateinit var shimmer_explorePlage : ShimmerFrameLayout
-    lateinit var shimmer_exploreNature : ShimmerFrameLayout
-    lateinit var shimmer_exploreCulture : ShimmerFrameLayout
-    lateinit var shimmer_exploreSport : ShimmerFrameLayout
-    lateinit var shimmer_exploreArt : ShimmerFrameLayout
-    lateinit var shimmer_exploreFood : ShimmerFrameLayout
+//    lateinit var shimmer_exploreDesert : ShimmerFrameLayout
+//    lateinit var shimmer_explorePlage : ShimmerFrameLayout
+//    lateinit var shimmer_exploreNature : ShimmerFrameLayout
+//    lateinit var shimmer_exploreCulture : ShimmerFrameLayout
+//    lateinit var shimmer_exploreSport : ShimmerFrameLayout
+//    lateinit var shimmer_exploreArt : ShimmerFrameLayout
+//    lateinit var shimmer_exploreFood : ShimmerFrameLayout
     //
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -116,13 +116,13 @@ class ExploreFragmenttodo : Fragment() {
         RecyclerFood.adapter = AdapterRecommendedFood
         ShowPostsFood("Food")
         //
-        shimmer_exploreDesert = view.findViewById(R.id.shimmer_exploreDesert)
-        shimmer_explorePlage = view.findViewById(R.id.shimmer_explorePlage)
-        shimmer_exploreNature = view.findViewById(R.id.shimmer_exploreNature)
-        shimmer_exploreCulture = view.findViewById(R.id.shimmer_exploreCulture)
-        shimmer_exploreSport = view.findViewById(R.id.shimmer_exploreSport)
-        shimmer_exploreArt = view.findViewById(R.id.shimmer_exploreArt)
-        shimmer_exploreFood = view.findViewById(R.id.shimmer_exploreFood)
+//        shimmer_exploreDesert = view.findViewById(R.id.shimmer_exploreDesert)
+//        shimmer_explorePlage = view.findViewById(R.id.shimmer_explorePlage)
+//        shimmer_exploreNature = view.findViewById(R.id.shimmer_exploreNature)
+//        shimmer_exploreCulture = view.findViewById(R.id.shimmer_exploreCulture)
+//        shimmer_exploreSport = view.findViewById(R.id.shimmer_exploreSport)
+//        shimmer_exploreArt = view.findViewById(R.id.shimmer_exploreArt)
+//        shimmer_exploreFood = view.findViewById(R.id.shimmer_exploreFood)
 
 
     }
@@ -130,200 +130,64 @@ class ExploreFragmenttodo : Fragment() {
     fun ShowPostsDesert(TypeCategory: String) {
         val map: HashMap<String, String> = HashMap()
         map["categorie"] = TypeCategory
-        val retrofi: Retrofit = retrofit.getInstance()
-        val service: AdminApi = retrofi.create(AdminApi::class.java)
-        val call: Call<List<PostsAdmin>> = service.FindByCategory(map)
-        call.enqueue(object : Callback<List<PostsAdmin>> {
-            override fun onResponse(call: Call<List<PostsAdmin>>, response: Response<List<PostsAdmin>>) {
-//                PostsModels = ArrayList(response.body())
-//                PostsModels = myObjectsArray;
-                PostsModels.clear()
-                PostsModels.add(PostsAdmin("1","azadi","its azadi","azadi.jpg","desert","3"))
-                PostsModels.add(PostsAdmin("2","chitgar","its azadi","chitgar.jpg","desert","3"))
-                PostsModels.add(PostsAdmin("3","eram","its azadi","eram.jpg","desert","3"))
-                PostsModels.add(PostsAdmin("4","gol","its azadi","golestan.jpg","desert","3"))
+        PostsModels = PostData.fetchC1PostsModels()
 
-//                PostsModels.add(PostsAdmin("11","22","33"))
-//                PostsModels.add(PostsAdmin("111","222","333"))
-//                PostsModels.add(PostsAdmin("1111","2222","3333"))
-
-                PostsModels.forEach{
-                    run {
-                        println(it)
-                    }
-                }
-
-                println("respooooooooooooooooonse : "+response.body())
-                println("mooooodeeeeeeeeeeeeeeeel : "+PostsModels)
-                //println("Boddddyyyyyyyyyy "+response.body())
-                //println("Size in fun "+PostsModels.size)
-                AdapterRecommendedDesert.setDataList(PostsModels)
-                AdapterRecommendedDesert.notifyDataSetChanged()
-                //
-                shimmer_exploreDesert.stopShimmerAnimation();
-                shimmer_exploreDesert.setVisibility(View.GONE);
+        PostsModels.forEach{
+            run {
+                println(it)
             }
-            @SuppressLint("RestrictedApi")
-            override fun onFailure(call: Call<List<PostsAdmin>>, t: Throwable) {
-                println("Message :" + t.stackTrace)
-                Log.d("***", "Opppsss" + t.message)
-            }
-        })
-    }
+        }
+        AdapterRecommendedDesert.setDataList(PostsModels)
+        AdapterRecommendedDesert.notifyDataSetChanged()
 
-    fun ShowPostsPlage(TypeCategory: String) {
-        val map: HashMap<String, String> = HashMap()
-        map["categorie"] = TypeCategory
-        val retrofi: Retrofit = retrofit.getInstance()
-        val service: AdminApi = retrofi.create(AdminApi::class.java)
-        val call: Call<List<PostsAdmin>> = service.FindByCategory(map)
-        call.enqueue(object : Callback<List<PostsAdmin>> {
-            override fun onResponse(call: Call<List<PostsAdmin>>, response: Response<List<PostsAdmin>>) {
-                PostsModels = ArrayList(response.body())
-
-                //println("Boddddyyyyyyyyyy "+response.body())
-                //println("Size in fun "+PostsModels.size)
-                AdapterRecommendedPlage.setDataList(PostsModels)
-                AdapterRecommendedPlage.notifyDataSetChanged()
-                //
-                shimmer_explorePlage.stopShimmerAnimation();
-                shimmer_explorePlage.setVisibility(View.GONE);
-            }
-            @SuppressLint("RestrictedApi")
-            override fun onFailure(call: Call<List<PostsAdmin>>, t: Throwable) {
-                println("Message :" + t.stackTrace)
-                Log.d("***", "Opppsss" + t.message)
-            }
-        })
     }
 
     fun ShowPostsNature(TypeCategory: String) {
         val map: HashMap<String, String> = HashMap()
         map["categorie"] = TypeCategory
-        val retrofi: Retrofit = retrofit.getInstance()
-        val service: AdminApi = retrofi.create(AdminApi::class.java)
-        val call: Call<List<PostsAdmin>> = service.FindByCategory(map)
-        call.enqueue(object : Callback<List<PostsAdmin>> {
-            override fun onResponse(
-                call: Call<List<PostsAdmin>>,
-                response: Response<List<PostsAdmin>>
-            ) {
-                PostsModels = ArrayList(response.body())
-                //println("Boddddyyyyyyyyyy " + response.body())
-                //println("Size in fun " + PostsModels.size)
-                AdapterRecommendedNature.setDataList(PostsModels)
-                AdapterRecommendedNature.notifyDataSetChanged()
-                //
-                shimmer_exploreNature.stopShimmerAnimation();
-                shimmer_exploreNature.setVisibility(View.GONE);
-            }
-
-            @SuppressLint("RestrictedApi")
-            override fun onFailure(call: Call<List<PostsAdmin>>, t: Throwable) {
-                println("Message :" + t.stackTrace)
-                Log.d("***", "Opppsss" + t.message)
-            }
-        })
+        PostsModels = PostData.fetchC2PostsModels()
+        AdapterRecommendedNature.setDataList(PostsModels)
+        AdapterRecommendedNature.notifyDataSetChanged()
     }
 
         fun ShowPostsCulture(TypeCategory: String) {
             val map: HashMap<String, String> = HashMap()
             map["categorie"] = TypeCategory
-            val retrofi: Retrofit = retrofit.getInstance()
-            val service: AdminApi = retrofi.create(AdminApi::class.java)
-            val call: Call<List<PostsAdmin>> = service.FindByCategory(map)
-            call.enqueue(object : Callback<List<PostsAdmin>> {
-                override fun onResponse(call: Call<List<PostsAdmin>>, response: Response<List<PostsAdmin>>) {
-                    PostsModels = ArrayList(response.body())
-                    //println("Boddddyyyyyyyyyy "+response.body())
-                    //println("Size in fun "+PostsModels.size)
-                    AdapterRecommendedCulture.setDataList(PostsModels)
-                    AdapterRecommendedCulture.notifyDataSetChanged()
-                    //
-                    shimmer_exploreCulture.stopShimmerAnimation();
-                    shimmer_exploreCulture.setVisibility(View.GONE);
-                }
-                @SuppressLint("RestrictedApi")
-                override fun onFailure(call: Call<List<PostsAdmin>>, t: Throwable) {
-                    println("Message :" + t.stackTrace)
-                    Log.d("***", "Opppsss" + t.message)
-                }
-            })
+            PostsModels = PostData.fetchC3PostsModels()
+            AdapterRecommendedCulture.setDataList(PostsModels)
+            AdapterRecommendedCulture.notifyDataSetChanged()
     }
 
     fun ShowPostsSport(TypeCategory: String) {
         val map: HashMap<String, String> = HashMap()
         map["categorie"] = TypeCategory
-        val retrofi: Retrofit = retrofit.getInstance()
-        val service: AdminApi = retrofi.create(AdminApi::class.java)
-        val call: Call<List<PostsAdmin>> = service.FindByCategory(map)
-        call.enqueue(object : Callback<List<PostsAdmin>> {
-            override fun onResponse(call: Call<List<PostsAdmin>>, response: Response<List<PostsAdmin>>) {
-                PostsModels = ArrayList(response.body())
-                //println("Boddddyyyyyyyyyy "+response.body())
-                //println("Size in fun "+PostsModels.size)
-                AdapterRecommendedSport.setDataList(PostsModels)
-                AdapterRecommendedSport.notifyDataSetChanged()
-                //
-                shimmer_exploreSport.stopShimmerAnimation();
-                shimmer_exploreSport.setVisibility(View.GONE);
-            }
-            @SuppressLint("RestrictedApi")
-            override fun onFailure(call: Call<List<PostsAdmin>>, t: Throwable) {
-                println("Message :" + t.stackTrace)
-                Log.d("***", "Opppsss" + t.message)
-            }
-        })
+        PostsModels = PostData.fetchC4PostsModels()
+        AdapterRecommendedSport.setDataList(PostsModels)
+        AdapterRecommendedSport.notifyDataSetChanged()
     }
 
     fun ShowPostsArt(TypeCategory: String) {
         val map: HashMap<String, String> = HashMap()
         map["categorie"] = TypeCategory
-        val retrofi: Retrofit = retrofit.getInstance()
-        val service: AdminApi = retrofi.create(AdminApi::class.java)
-        val call: Call<List<PostsAdmin>> = service.FindByCategory(map)
-        call.enqueue(object : Callback<List<PostsAdmin>> {
-            override fun onResponse(call: Call<List<PostsAdmin>>, response: Response<List<PostsAdmin>>) {
-                PostsModels = ArrayList(response.body())
-                //println("Boddddyyyyyyyyyy "+response.body())
-                //println("Size in fun "+PostsModels.size)
-                AdapterRecommendedArt.setDataList(PostsModels)
-                AdapterRecommendedArt.notifyDataSetChanged()
-                //
-                shimmer_exploreArt.stopShimmerAnimation();
-                shimmer_exploreArt.setVisibility(View.GONE);
-            }
-            @SuppressLint("RestrictedApi")
-            override fun onFailure(call: Call<List<PostsAdmin>>, t: Throwable) {
-                println("Message :" + t.stackTrace)
-                Log.d("***", "Opppsss" + t.message)
-            }
-        })
+        PostsModels = PostData.fetchC5PostsModels()
+        AdapterRecommendedArt.setDataList(PostsModels)
+        AdapterRecommendedArt.notifyDataSetChanged()
+    }
+
+    fun ShowPostsPlage(TypeCategory: String) {
+        val map: HashMap<String, String> = HashMap()
+        map["categorie"] = TypeCategory
+        PostsModels = PostData.fetchC6PostsModels()
+        AdapterRecommendedPlage.setDataList(PostsModels)
+        AdapterRecommendedPlage.notifyDataSetChanged()
     }
 
     fun ShowPostsFood(TypeCategory: String) {
         val map: HashMap<String, String> = HashMap()
         map["categorie"] = TypeCategory
-        val retrofi: Retrofit = retrofit.getInstance()
-        val service: AdminApi = retrofi.create(AdminApi::class.java)
-        val call: Call<List<PostsAdmin>> = service.FindByCategory(map)
-        call.enqueue(object : Callback<List<PostsAdmin>> {
-            override fun onResponse(call: Call<List<PostsAdmin>>, response: Response<List<PostsAdmin>>) {
-                PostsModels = ArrayList(response.body())
-                //println("Boddddyyyyyyyyyy "+response.body())
-                //println("Size in fun "+PostsModels.size)
-                AdapterRecommendedFood.setDataList(PostsModels)
-                AdapterRecommendedFood.notifyDataSetChanged()
-                //
-                shimmer_exploreFood.stopShimmerAnimation();
-                shimmer_exploreFood.setVisibility(View.GONE);
-            }
-            @SuppressLint("RestrictedApi")
-            override fun onFailure(call: Call<List<PostsAdmin>>, t: Throwable) {
-                println("Message :" + t.stackTrace)
-                Log.d("***", "Opppsss" + t.message)
-            }
-        })
+        PostsModels = PostData.fetchC7PostsModels()
+        AdapterRecommendedFood.setDataList(PostsModels)
+        AdapterRecommendedFood.notifyDataSetChanged()
     }
 
 
@@ -382,26 +246,26 @@ class ExploreFragmenttodo : Fragment() {
         scrollView.postDelayed({ scrollView.smoothScrollTo(0, childView.bottom) }, delay)
     }
 
-    override fun onResume() {
-        super.onResume()
-        shimmer_exploreDesert.startShimmerAnimation()
-        shimmer_explorePlage.startShimmerAnimation()
-        shimmer_exploreNature.startShimmerAnimation()
-        shimmer_exploreCulture.startShimmerAnimation()
-        shimmer_exploreSport.startShimmerAnimation()
-        shimmer_exploreArt.startShimmerAnimation()
-        shimmer_exploreFood.startShimmerAnimation()
-    }
+//    override fun onResume() {
+//        super.onResume()
+////        shimmer_exploreDesert.startShimmerAnimation()
+////        shimmer_explorePlage.startShimmerAnimation()
+//        shimmer_exploreNature.startShimmerAnimation()
+//        shimmer_exploreCulture.startShimmerAnimation()
+//        shimmer_exploreSport.startShimmerAnimation()
+//        shimmer_exploreArt.startShimmerAnimation()
+//        shimmer_exploreFood.startShimmerAnimation()
+//    }
 
-    override fun onPause() {
-        shimmer_exploreDesert.stopShimmerAnimation()
-        shimmer_explorePlage.stopShimmerAnimation()
-        shimmer_exploreNature.stopShimmerAnimation()
-        shimmer_exploreCulture.stopShimmerAnimation()
-        shimmer_exploreSport.stopShimmerAnimation()
-        shimmer_exploreArt.stopShimmerAnimation()
-        shimmer_exploreFood.stopShimmerAnimation()
-        super.onPause()
-    }
+//    override fun onPause() {
+////        shimmer_exploreDesert.stopShimmerAnimation()
+////        shimmer_explorePlage.stopShimmerAnimation()
+//        shimmer_exploreNature.stopShimmerAnimation()
+//        shimmer_exploreCulture.stopShimmerAnimation()
+//        shimmer_exploreSport.stopShimmerAnimation()
+//        shimmer_exploreArt.stopShimmerAnimation()
+//        shimmer_exploreFood.stopShimmerAnimation()
+//        super.onPause()
+//    }
 }
 

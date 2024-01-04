@@ -192,14 +192,7 @@ lateinit var  imgMosque: ImageView
             override fun onResponse(call: Call<List<PostsAdmin>>, response: Response<List<PostsAdmin>>) {
 //                PostsModels = ArrayList(response.body())
                 PostsModels = PostData.fetchPostsModels()
-//                PostsModels.clear()
-//                PostsModels.add(PostsAdmin("1","azadi","its azadi","azadi.jpg","desert","3"))
-//                PostsModels.add(PostsAdmin("2","chitgar","its azadi","chitgar.jpg","desert","3"))
-//                PostsModels.add(PostsAdmin("3","eram","its azadi","eram.jpg","desert","3"))
-//                PostsModels.add(PostsAdmin("4","gol","its azadi","golestan.jpg","desert","3"))
 
-                //println("Boddddyyyyyyyyyy "+response.body())
-                //println("Size in fun "+PostsModels.size)
                 AdapterRecommended.setDataList(PostsModels)
                 AdapterRecommended.notifyDataSetChanged()
                 // Stopping Shimmer Effect's animation after data is loaded to ListView

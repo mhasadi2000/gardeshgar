@@ -30,7 +30,7 @@
                     android:layout_width="85dp"
                     android:layout_height="85dp"
                     android:adjustViewBounds="true"
-                    android:background="@drawable/img_beach"
+                    android:background="@drawable/waiting"
                     android:scaleType="fitXY"
                     android:src="@drawable/raduisimage" />
 

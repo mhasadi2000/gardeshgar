@@ -58,21 +58,23 @@
         android:layout_marginEnd="0dp"
         android:src="@drawable/editprofil" />
 
-    <TextView
-        android:id="@+id/txtempty"
-        android:layout_width="190dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView5"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/about_me"
-        android:textAlignment="viewStart"
-        android:textColor="#817E7E"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/txtempty"
+                        android:layout_width="190dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageView5"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="141dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="80dp"
+                        android:text="حساب کاربری"
+                        android:textAlignment="viewStart"
+                        android:textColor="#817E7E"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
-    <TextView
+                    <TextView
         android:id="@+id/txtempty3"
         android:layout_width="100dp"
         android:layout_height="wrap_content"

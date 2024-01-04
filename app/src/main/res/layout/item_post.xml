@@ -22,7 +22,7 @@
             android:maxWidth="380dp"
             android:maxHeight="233dp"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/img_beach" />
+            app:srcCompat="@drawable/waiting" />
 
 
     </LinearLayout>

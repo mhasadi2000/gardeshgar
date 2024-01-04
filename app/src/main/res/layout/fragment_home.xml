@@ -59,7 +59,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="10dp"
-                    android:text="Categorie"
+                    android:text="دسته بندی ها"
                     android:textColor="#202B36"
                     android:textSize="22sp"
                     android:textStyle="bold"
@@ -85,7 +85,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="10dp"
-                    android:text="Recommended"
+                    android:text="پیشنهادی"
                     android:textColor="#202B36"
                     android:textSize="22sp"
                     android:textStyle="bold"
@@ -144,7 +144,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="17dp"
                     android:layout_marginBottom="-10dp"
-                    android:text="Show all"
+                    android:text="نمایش همه"
                     android:textColor="#9E9EA2"
                     android:textStyle="bold" />
 
@@ -152,11 +152,13 @@
                     android:id="@+id/imgMosque"
                     android:layout_width="50dp"
                     android:layout_height="47dp"
+                    android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginTop="37dp"
-                    android:layout_marginEnd="29dp"
-                    android:src="@drawable/mosque" />
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginEnd="335dp"
+                    android:src="@drawable/namaz" />
 
             </RelativeLayout>
         </LinearLayout>

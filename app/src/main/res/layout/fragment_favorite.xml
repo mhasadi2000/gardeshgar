@@ -68,7 +68,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="20dp"
         android:layout_marginTop="15dp"
-        android:text="Bookmark"
+        android:text="علاقه مندی ها"
         android:textColor="#202B36"
         android:textSize="34sp"
         android:textStyle="bold"

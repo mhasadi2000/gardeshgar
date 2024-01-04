@@ -27,7 +27,7 @@
             android:layout_weight="233"
             android:adjustViewBounds="true"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/img_beach"
+            app:srcCompat="@drawable/waiting"
             app:setMaxZoom="10" />
 
         <RelativeLayout

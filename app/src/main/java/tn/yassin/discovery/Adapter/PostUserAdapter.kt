@@ -50,7 +50,7 @@ class PostUserAdapter(var context: Context) : RecyclerView.Adapter<PostUserViewH
          val NomUser = "nameuser"
         val datepost = filteredPostsList[position].datepost
          val description = filteredPostsList[position].description
-         val ImageLink = ("https://discovery.storage.iran.liara.space/"+filteredPostsList[position].photo)
+         val ImageLink = ("https://location-android-pr.storage.iran.liara.space/"+filteredPostsList[position].photo)
          //val AvatarUser = "Avatar".toInt()
          Glide
              .with(context)

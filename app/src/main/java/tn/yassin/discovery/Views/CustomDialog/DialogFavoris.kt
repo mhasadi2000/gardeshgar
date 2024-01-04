@@ -68,7 +68,7 @@ fun ShowDetailsPost(context: Context?, view: View) {
     ratingBarDetails!!.rating = RatingPlace!!.toFloat()
     ///
     //
-    val ImagePlacesss = ("https://discovery.storage.iran.liara.space/" + ImagePlace)
+    val ImagePlacesss = ("https://location-android-pr.storage.iran.liara.space/" + ImagePlace)
 //    val ImagePlacesss = ("https://serverdiscovery.onrender.com/imgPosts/" + ImagePlace)
     //println("Imaaage Custom DIalog " + ImagePlace)
     Glide

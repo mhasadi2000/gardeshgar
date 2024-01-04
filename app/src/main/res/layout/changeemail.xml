@@ -29,7 +29,7 @@
                 android:layout_toEndOf="@+id/AnnulerChangeEmail"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Modifier Votre Email"
+                android:text="ایمیل خود را تغییر دهید"
                 android:textColor="#515151"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -42,7 +42,7 @@
                 android:layout_marginStart="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Annuler"
+                android:text="بستن"
                 android:textColor="#FF6366" />
 
             <TextView
@@ -53,7 +53,7 @@
                 android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Enregistrer"
+                android:text="ثبت"
                 android:textColor="#CECFD1" />
 
             <com.google.android.material.textfield.TextInputLayout

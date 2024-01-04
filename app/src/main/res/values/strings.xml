@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Discovery</string>
+    <string name="app_name">GARDESHGAR</string>
     <!--+++++++++++++++++++++++++++++++++++++++++++++ Begin of Login++++++++++++++++++++++++++++++++++++++++++++++++-->
-    <string name="DontHaveAccount">New to Discovery? <font color='#FA181B'>Join Now</font></string>
-    <string name="Copyright">Discover tunisia © 2022  <font color='#FA181B'>made with ❤</font></string>
+    <string name="DontHaveAccount">New in Gardeshgar? <font color='#FA181B'>Join Now</font></string>
+    <string name="Copyright">Tehran Gardeshgari © 2024  <font color='#FA181B'>made with ❤</font></string>
     <string name="AlreadyHaveAccount">Already have an account? <font color='#FA181B'>Login</font></string>
     <string name="DidntreceveCode">Didn\'t receive the Code? <font color='#FA181B'>Resend</font></string>
     <string name="remember_me">Remember Me</string>
@@ -17,33 +17,33 @@
     <string name="EmailMalformed">Email Malformed!</string>
     <string name="BacktoPageLogin">Back to? <font color='#FA181B'>Login</font></string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="WhatdouWant">What are \nyou looking for ?</string>
+    <string name="WhatdouWant">          گردشگر</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="home">Home</string>
-    <string name="explorer">Explore</string>
-    <string name="add">Add</string>
-    <string name="favorite">Favorite</string>
-    <string name="profile">Profile</string>
-    <string name="edit_profile">Edit Profile</string>
-    <string name="photos">Photos</string>
-    <string name="videos">Videos</string>
-    <string name="edit_profil">Edit profil</string>
-    <string name="about_me">About me</string>
-    <string name="nom">Nom</string>
-    <string name="bio">Bio</string>
+    <string name="home">خانه</string>
+    <string name="explorer">جستجو</string>
+    <string name="add">افزودن</string>
+    <string name="favorite">علاقه مندی</string>
+    <string name="profile">حساب کاربری</string>
+    <string name="edit_profile">ویرایش حساب کاربری</string>
+    <string name="photos">تصاویر</string>
+    <string name="videos">فیلم ها</string>
+    <string name="edit_profil">ویرایش</string>
+    <string name="about_me">Profile</string>
+    <string name="nom">name</string>
+    <string name="bio">bio</string>
     <string name="change_password">Change password?</string>
-    <string name="type_something_cool_here">Type something cool here!</string>
-    <string name="photo">Photo</string>
-    <string name="video">Video</string>
-    <string name="text">Text</string>
-    <string name="link">Link</string>
-    <string name="post">Post</string>
-    <string name="nothing">Nothing</string>
-    <string name="your_collection_list_of_photos_is_empty">Your collection list of photos is empty!</string>
-    <string name="your_collection_list_of_videos_is_empty">Your collection list of videos is empty!</string>
-    <string name="we_are_trying_to_connect_Please_wait">We are trying to connect Please wait ...</string>
-    <string name="this_is_a_custom_toast">This is a custom Toast</string>
-    <string name="informations">INFORMATIONS</string>
+    <string name="type_something_cool_here">اطلاعات را وارد کنید</string>
+    <string name="photo">تصویر</string>
+    <string name="video">فیلم</string>
+    <string name="text">متن</string>
+    <string name="link">لینک</string>
+    <string name="post">ئست</string>
+    <string name="nothing">خالی</string>
+    <string name="your_collection_list_of_photos_is_empty">خالی!</string>
+    <string name="your_collection_list_of_videos_is_empty">خالی!</string>
+    <string name="we_are_trying_to_connect_Please_wait">منتظر بمانید ...</string>
+    <string name="this_is_a_custom_toast">متن دلخواه</string>
+    <string name="informations">اطلاعات</string>
     <string name="no_internet">No Internet :(</string>
     <string name="you_need_to_be_connected_to_the_internet">You need to be connected to the internet</string>
     <string name="confirm_email_address">Confirm Email Address</string>

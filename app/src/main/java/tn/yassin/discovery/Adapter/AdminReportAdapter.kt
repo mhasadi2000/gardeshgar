@@ -56,9 +56,9 @@ class AdminReportAdapter(var context: Context) : RecyclerView.Adapter<AdminRepor
         val datepost = filteredPostsList[position].datepost
         val description = filteredPostsList[position].description
         val ImagePostLink =
-            ("https://discovery.storage.iran.liara.space/" + filteredPostsList[position].photo)
+            ("https://location-android-pr.storage.iran.liara.space/" + filteredPostsList[position].photo)
         val ImageAvatarLink =
-            ("https://discovery.storage.iran.liara.space/" + filteredPostsList[position].avatar)
+            ("https://location-android-pr.storage.iran.liara.space/" + filteredPostsList[position].avatar)
         //println("Image "+ImagePostLink)
         val nblike = filteredPostsList[position].nblike
         Glide

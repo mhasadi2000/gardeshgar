@@ -27,7 +27,7 @@
                 android:layout_height="220dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/img_beach"
+                android:src="@drawable/azadi"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -48,7 +48,7 @@
                 android:layout_width="361dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
-                android:text="Categorie"
+                android:text="دسته بندی ها"
                 android:textColor="#202B36"
                 android:textSize="22sp"
                 android:textStyle="bold"
@@ -192,7 +192,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginBottom="5dp"
                 android:adjustViewBounds="true"
-                android:background="@drawable/gif_beach"
+                android:background="@drawable/game"
                 android:scaleType="fitXY"
 
                 android:src="@drawable/raduisimage"
@@ -208,7 +208,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginBottom="5dp"
                 android:adjustViewBounds="true"
-                android:background="@drawable/gif_nature"
+                android:background="@drawable/park"
                 android:scaleType="fitXY"
 
                 android:src="@drawable/raduisimage"
@@ -241,7 +241,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginBottom="5dp"
                 android:adjustViewBounds="true"
-                android:background="@drawable/gif_sportt"
+                android:background="@drawable/gif_food"
                 android:scaleType="fitXY"
                 android:src="@drawable/raduisimage"
                 app:layout_constraintBottom_toBottomOf="@+id/CadreSport"
@@ -257,7 +257,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginBottom="5dp"
                 android:adjustViewBounds="true"
-                android:background="@drawable/gif_arts"
+                android:background="@drawable/market"
                 android:scaleType="fitXY"
                 android:src="@drawable/raduisimage"
                 app:layout_constraintBottom_toBottomOf="@+id/CadreArt"
@@ -273,7 +273,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginBottom="5dp"
                 android:adjustViewBounds="true"
-                android:background="@drawable/gif_food"
+                android:background="@drawable/suburb"
                 android:scaleType="fitXY"
                 android:src="@drawable/raduisimage"
                 app:layout_constraintBottom_toBottomOf="@+id/CadreFood"
@@ -380,7 +380,7 @@
                 android:layout_height="85dp"
                 android:layout_marginStart="5dp"
                 android:adjustViewBounds="true"
-                android:background="@drawable/gif_sahara"
+                android:background="@drawable/religen"
                 android:scaleType="fitXY"
 
                 android:src="@drawable/raduisimage"
@@ -427,9 +427,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <include layout="@layout/shimmer_explore" />
-                    <include layout="@layout/shimmer_explore" />
-                    <include layout="@layout/shimmer_explore" />
+<!--                    <include layout="@layout/shimmer_explore" />-->
+<!--                    <include layout="@layout/shimmer_explore" />-->
+<!--                    <include layout="@layout/shimmer_explore" />-->
                 </LinearLayout>
             </com.facebook.shimmer.ShimmerFrameLayout>
 
@@ -448,9 +448,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <include layout="@layout/shimmer_explore" />
-                    <include layout="@layout/shimmer_explore" />
-                    <include layout="@layout/shimmer_explore" />
+<!--                    <include layout="@layout/shimmer_explore" />-->
+<!--                    <include layout="@layout/shimmer_explore" />-->
+<!--                    <include layout="@layout/shimmer_explore" />-->
                 </LinearLayout>
             </com.facebook.shimmer.ShimmerFrameLayout>
 
@@ -469,9 +469,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <include layout="@layout/shimmer_explore" />
-                    <include layout="@layout/shimmer_explore" />
-                    <include layout="@layout/shimmer_explore" />
+<!--                    <include layout="@layout/shimmer_explore" />-->
+<!--                    <include layout="@layout/shimmer_explore" />-->
+<!--                    <include layout="@layout/shimmer_explore" />-->
                 </LinearLayout>
             </com.facebook.shimmer.ShimmerFrameLayout>
 
@@ -490,9 +490,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <include layout="@layout/shimmer_explore" />
-                    <include layout="@layout/shimmer_explore" />
-                    <include layout="@layout/shimmer_explore" />
+<!--                    <include layout="@layout/shimmer_explore" />-->
+<!--                    <include layout="@layout/shimmer_explore" />-->
+<!--                    <include layout="@layout/shimmer_explore" />-->
                 </LinearLayout>
             </com.facebook.shimmer.ShimmerFrameLayout>
 
@@ -511,9 +511,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <include layout="@layout/shimmer_explore" />
-                    <include layout="@layout/shimmer_explore" />
-                    <include layout="@layout/shimmer_explore" />
+<!--                    <include layout="@layout/shimmer_explore" />-->
+<!--                    <include layout="@layout/shimmer_explore" />-->
+<!--                    <include layout="@layout/shimmer_explore" />-->
                 </LinearLayout>
             </com.facebook.shimmer.ShimmerFrameLayout>
 
@@ -532,9 +532,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <include layout="@layout/shimmer_explore" />
-                    <include layout="@layout/shimmer_explore" />
-                    <include layout="@layout/shimmer_explore" />
+<!--                    <include layout="@layout/shimmer_explore" />-->
+<!--                    <include layout="@layout/shimmer_explore" />-->
+<!--                    <include layout="@layout/shimmer_explore" />-->
                 </LinearLayout>
             </com.facebook.shimmer.ShimmerFrameLayout>
 
@@ -553,9 +553,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <include layout="@layout/shimmer_explore" />
-                    <include layout="@layout/shimmer_explore" />
-                    <include layout="@layout/shimmer_explore" />
+<!--                    <include layout="@layout/shimmer_explore" />-->
+<!--                    <include layout="@layout/shimmer_explore" />-->
+<!--                    <include layout="@layout/shimmer_explore" />-->
                 </LinearLayout>
             </com.facebook.shimmer.ShimmerFrameLayout>
 

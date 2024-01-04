@@ -15,7 +15,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="16dp"
         android:layout_toEndOf="@+id/backCategory"
-        android:text="Category"
+        android:text="دسته بندی ها"
         android:textAlignment="center"
         android:textColor="#515151"
         android:textSize="35sp"

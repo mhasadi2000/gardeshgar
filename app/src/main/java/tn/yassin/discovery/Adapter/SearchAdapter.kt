@@ -50,7 +50,7 @@ class SearchAdapter(var context: Context) : RecyclerView.Adapter<RecommendedView
     override fun onBindViewHolder(holder: RecommendedViewHolder, position: Int) {
         var data = filteredPostsList[position]
 
-        val ImagePlace = ("https://discovery.storage.iran.liara.space/"+filteredPostsList[position].photo)
+        val ImagePlace = ("https://location-android-pr.storage.iran.liara.space/"+filteredPostsList[position].photo)
         // println("Imageeeee ==>>>>> "+ImagePlace)
         val NomPlace = filteredPostsList[position].nom
 //        val Lieux = filteredPostsList[position].lieux

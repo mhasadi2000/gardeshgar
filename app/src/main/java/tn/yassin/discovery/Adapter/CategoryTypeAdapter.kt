@@ -65,7 +65,7 @@ class CategoryTypeAdapter(var context: Context) : RecyclerView.Adapter<CategoryT
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         var data = filteredPostsList[position]
 
-        val ImagePlace = ("https://discovery.storage.iran.liara.space/"+filteredPostsList[position].photo)
+        val ImagePlace = ("https://location-android-pr.storage.iran.liara.space/"+filteredPostsList[position].photo)
         //println("Imageeeee ==>>>>> "+ImagePlace)
        val NomPlace = filteredPostsList[position].nom
 //        val Lieux = filteredPostsList[position].lieux

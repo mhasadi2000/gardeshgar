@@ -107,7 +107,7 @@
             android:adjustViewBounds="true"
             android:padding="0dp"
             android:scaleType="fitXY"
-            app:srcCompat="@drawable/img_beach" />
+            app:srcCompat="@drawable/waiting" />
 
         <RelativeLayout
             android:layout_width="match_parent"
