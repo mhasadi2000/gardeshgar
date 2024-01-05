@@ -1,97 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/gradiantcolor"
-        android:orientation="vertical"
-        tools:context=".Views.Activity.PrayerTimes">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradiantcolor"
+    android:orientation="vertical"
+    tools:context=".Views.Activity.PrayerTimes">
 
 
-    <EditText
-        android:id="@+id/txtEsmDewla"
-        android:layout_width="116dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="15dp"
-        android:background="#46E14040"
-        android:elevation="1dp"
-        android:ems="10"
-        android:gravity="left"
-        android:hint="البلاد"
-        android:inputType="text"
-        android:maxLength="25"
-        android:maxLines="1"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textColorHint="#F8E3E3"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/view6"
-        app:layout_constraintStart_toStartOf="@+id/view6"
-        app:layout_constraintTop_toBottomOf="@+id/imgTitr1"
-        tools:ignore="MissingConstraints,RtlCompat" />
+    <!--    <EditText-->
+    <!--        android:id="@+id/txtEsmDewla"-->
+    <!--        android:layout_width="116dp"-->
+    <!--        android:layout_height="30dp"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:background="#46E14040"-->
+    <!--        android:elevation="1dp"-->
+    <!--        android:ems="10"-->
+    <!--        android:gravity="left"-->
+    <!--        android:hint="البلاد"-->
+    <!--        android:inputType="text"-->
+    <!--        android:maxLength="25"-->
+    <!--        android:maxLines="1"-->
+    <!--        android:textAlignment="center"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textColorHint="#F8E3E3"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/view6"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/view6"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/imgTitr1"-->
+    <!--        tools:ignore="MissingConstraints,RtlCompat" />-->
 
-    <EditText
-        android:id="@+id/txtEsmWleya"
-        android:layout_width="116dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="8dp"
-        android:background="#46E14040"
-        android:elevation="1dp"
-        android:ems="10"
-        android:gravity="left"
-        android:hint="المدينة"
-        android:inputType="text"
-        android:maxLength="25"
-        android:maxLines="1"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textColorHint="#F8E3E3"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/txtEsmDewla"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/txtEsmDewla"
-        app:layout_constraintTop_toBottomOf="@+id/txtEsmDewla"
-        tools:ignore="MissingConstraints,RtlCompat" />
+    <!--    <EditText-->
+    <!--        android:id="@+id/txtEsmWleya"-->
+    <!--        android:layout_width="116dp"-->
+    <!--        android:layout_height="30dp"-->
+    <!--        android:layout_marginTop="8dp"-->
+    <!--        android:background="#46E14040"-->
+    <!--        android:elevation="1dp"-->
+    <!--        android:ems="10"-->
+    <!--        android:gravity="left"-->
+    <!--        android:hint="المدينة"-->
+    <!--        android:inputType="text"-->
+    <!--        android:maxLength="25"-->
+    <!--        android:maxLines="1"-->
+    <!--        android:textAlignment="center"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textColorHint="#F8E3E3"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/txtEsmDewla"-->
+    <!--        app:layout_constraintHorizontal_bias="1.0"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/txtEsmDewla"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/txtEsmDewla"-->
+    <!--        tools:ignore="MissingConstraints,RtlCompat" />-->
 
-    <ImageView
-        android:id="@+id/btnSearch"
-        android:layout_width="46dp"
-        android:layout_height="45dp"
-        android:layout_below="@+id/imgTitr1"
-        android:layout_marginEnd="12dp"
-        android:layout_toEndOf="@+id/txtEsmDewla"
-        android:elevation="1dp"
-        android:rotation="90"
-        android:rotationX="20"
-        android:src="@drawable/ic_baseline_search_24"
-        app:layout_constraintBottom_toBottomOf="@+id/txtEsmWleya"
-        app:layout_constraintEnd_toEndOf="@+id/view6"
-        app:layout_constraintTop_toTopOf="@+id/txtEsmDewla"
-        app:layout_constraintVertical_bias="0.391"
-        tools:ignore="MissingConstraints" />
+    <!--    <ImageView-->
+    <!--        android:id="@+id/btnSearch"-->
+    <!--        android:layout_width="46dp"-->
+    <!--        android:layout_height="45dp"-->
+    <!--        android:layout_below="@+id/imgTitr1"-->
+    <!--        android:layout_marginEnd="12dp"-->
+    <!--        android:layout_toEndOf="@+id/txtEsmDewla"-->
+    <!--        android:elevation="1dp"-->
+    <!--        android:rotation="90"-->
+    <!--        android:rotationX="20"-->
+    <!--        android:src="@drawable/ic_baseline_search_24"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/txtEsmWleya"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/view6"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/txtEsmDewla"-->
+    <!--        app:layout_constraintVertical_bias="0.391"-->
+    <!--        tools:ignore="MissingConstraints" />-->
 
-    <ImageView
-        android:id="@+id/imgMosque"
-        android:layout_width="46dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="13dp"
-        android:elevation="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view6"
-        app:layout_constraintStart_toStartOf="@+id/view6"
-        app:layout_constraintTop_toTopOf="@+id/view6"
-        app:layout_constraintVertical_bias="0.595"
-        app:srcCompat="@drawable/mosquee" />
+    <!--    <ImageView-->
+    <!--        android:id="@+id/imgMosque"-->
+    <!--        android:layout_width="46dp"-->
+    <!--        android:layout_height="45dp"-->
+    <!--        android:layout_marginStart="13dp"-->
+    <!--        android:elevation="1dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/view6"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/view6"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/view6"-->
+    <!--        app:layout_constraintVertical_bias="0.595"-->
+    <!--        app:srcCompat="@drawable/mosquee" />-->
 
-    <View
-        android:id="@+id/view6"
-        android:layout_width="251dp"
-        android:layout_height="144dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/whitebg_rounded"
-        app:layout_constraintEnd_toEndOf="@+id/ViewBar"
-        app:layout_constraintStart_toStartOf="@+id/ViewBar"
-        app:layout_constraintTop_toBottomOf="@+id/ViewBar" />
+    <!--    <View-->
+    <!--        android:id="@+id/view6"-->
+    <!--        android:layout_width="251dp"-->
+    <!--        android:layout_height="144dp"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:background="@drawable/whitebg_rounded"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/ViewBar"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/ViewBar"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/ViewBar" />-->
 
     <View
         android:id="@+id/view12www"
@@ -148,19 +148,19 @@
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toBottomOf="@+id/view12www5" />
 
-    <TextView
-        android:id="@+id/imgTitr1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:elevation="1dp"
-        android:text="تحديد المكان"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/view6"
-        app:layout_constraintStart_toStartOf="@+id/view6"
-        app:layout_constraintTop_toTopOf="@+id/view6" />
+    <!--    <TextView-->
+    <!--        android:id="@+id/imgTitr1"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="5dp"-->
+    <!--        android:elevation="1dp"-->
+    <!--        android:text="تحديد المكان"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        android:textSize="20sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/view6"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/view6"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/view6" />-->
 
     <TextView
         android:id="@+id/imgTitr2"
@@ -168,7 +168,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:elevation="1dp"
-        android:text="مواقيت الصلاة"
+        android:text="اذان ها"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -182,7 +182,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
         android:elevation="1dp"
-        android:text="الصلاة القادمة"
+        android:text="اذان پیش رو"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -194,12 +194,12 @@
         android:id="@+id/view"
         android:layout_width="301dp"
         android:layout_height="260dp"
+        android:layout_marginBottom="84dp"
         android:background="@drawable/bg_rounded"
         app:layout_constraintBottom_toTopOf="@+id/imgTitr"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view6" />
+        app:layout_constraintTop_toBottomOf="@+id/ViewBar" />
 
     <View
         android:id="@+id/view11"
@@ -208,9 +208,9 @@
         android:background="@drawable/bg_rounded"
         app:layout_constraintBottom_toTopOf="@+id/view2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintVertical_bias="0.502" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -228,7 +228,7 @@
         android:layout_height="27dp"
         android:layout_marginStart="60dp"
         android:gravity="right"
-        android:text="الظهر"
+        android:text="ظهر"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -242,7 +242,7 @@
         android:layout_height="15dp"
         android:layout_marginStart="60dp"
         android:gravity="right"
-        android:text="الفجر"
+        android:text="صبح"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -256,7 +256,7 @@
         android:layout_height="27dp"
         android:layout_marginStart="60dp"
         android:gravity="right"
-        android:text="المغرب"
+        android:text="مغرب"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -270,7 +270,7 @@
         android:layout_height="27dp"
         android:layout_marginStart="60dp"
         android:gravity="right"
-        android:text="العشاء"
+        android:text="عشاء"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -284,7 +284,7 @@
         android:layout_height="27dp"
         android:layout_marginStart="60dp"
         android:gravity="right"
-        android:text="العصر"
+        android:text="عصر"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -383,7 +383,7 @@
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="13dp"
         android:elevation="10dp"
-        android:text="اليوم :"
+        android:text="امروز :"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -396,15 +396,18 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/ViewBar"
         android:layout_alignBottom="@+id/ViewBar"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginStart="31dp"
         android:elevation="10dp"
         android:format24Hour="k:mm:ss"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/ViewBar"
-        app:layout_constraintStart_toStartOf="@+id/ViewBar" />
+        app:layout_constraintEnd_toStartOf="@+id/txtDayNow"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ViewBar"
+        app:layout_constraintTop_toTopOf="@+id/ViewBar"
+        app:layout_constraintVertical_bias="0.391" />
 
     <TextView
         android:id="@+id/txtDayNow"
@@ -415,7 +418,7 @@
         android:layout_marginBottom="13dp"
         android:layout_toStartOf="@+id/textView"
         android:elevation="10dp"
-        android:text="الخميس"
+        android:text="جمعه"
         android:textColor="#c4f2c9"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -533,60 +536,60 @@
         app:layout_constraintTop_toTopOf="@+id/view5"
         app:srcCompat="@drawable/dhoher" />
 
-    <View
-        android:id="@+id/cs1"
-        android:layout_width="40dp"
-        android:layout_height="27dp"
-        android:layout_marginEnd="10dp"
-        android:background="@drawable/whitebg_rounded"
-        android:elevation="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/txtFajr"
-        app:layout_constraintEnd_toStartOf="@+id/txtFajr"
-        app:layout_constraintTop_toTopOf="@+id/txtFajr" />
+<!--    <View-->
+<!--        android:id="@+id/cs1"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="27dp"-->
+<!--        android:layout_marginEnd="10dp"-->
+<!--        android:background="@drawable/whitebg_rounded"-->
+<!--        android:elevation="1dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/txtFajr"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/txtFajr"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/txtFajr" />-->
 
-    <View
-        android:id="@+id/cs2"
-        android:layout_width="40dp"
-        android:layout_height="27dp"
-        android:layout_marginEnd="10dp"
-        android:background="@drawable/whitebg_rounded"
-        android:elevation="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/txtDhuhr"
-        app:layout_constraintEnd_toStartOf="@+id/txtDhuhr"
-        app:layout_constraintTop_toTopOf="@+id/txtDhuhr" />
+<!--    <View-->
+<!--        android:id="@+id/cs2"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="27dp"-->
+<!--        android:layout_marginEnd="10dp"-->
+<!--        android:background="@drawable/whitebg_rounded"-->
+<!--        android:elevation="1dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/txtDhuhr"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/txtDhuhr"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/txtDhuhr" />-->
 
-    <View
-        android:id="@+id/cs3"
-        android:layout_width="40dp"
-        android:layout_height="27dp"
-        android:layout_marginEnd="10dp"
-        android:background="@drawable/whitebg_rounded"
-        android:elevation="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/txtAsar"
-        app:layout_constraintEnd_toStartOf="@+id/txtAsar"
-        app:layout_constraintTop_toTopOf="@+id/txtAsar" />
+<!--    <View-->
+<!--        android:id="@+id/cs3"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="27dp"-->
+<!--        android:layout_marginEnd="10dp"-->
+<!--        android:background="@drawable/whitebg_rounded"-->
+<!--        android:elevation="1dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/txtAsar"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/txtAsar"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/txtAsar" />-->
 
-    <View
-        android:id="@+id/cs4"
-        android:layout_width="40dp"
-        android:layout_height="27dp"
-        android:layout_marginEnd="10dp"
-        android:background="@drawable/whitebg_rounded"
-        android:elevation="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/txtMaghrib"
-        app:layout_constraintEnd_toStartOf="@+id/txtMaghrib"
-        app:layout_constraintTop_toTopOf="@+id/txtMaghrib" />
+<!--    <View-->
+<!--        android:id="@+id/cs4"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="27dp"-->
+<!--        android:layout_marginEnd="10dp"-->
+<!--        android:background="@drawable/whitebg_rounded"-->
+<!--        android:elevation="1dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/txtMaghrib"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/txtMaghrib"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/txtMaghrib" />-->
 
-    <View
-        android:id="@+id/cs5"
-        android:layout_width="40dp"
-        android:layout_height="27dp"
-        android:layout_marginEnd="10dp"
-        android:background="@drawable/whitebg_rounded"
-        android:elevation="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/txtIsha"
-        app:layout_constraintEnd_toStartOf="@+id/txtIsha"
-        app:layout_constraintTop_toTopOf="@+id/txtIsha" />
+<!--    <View-->
+<!--        android:id="@+id/cs5"-->
+<!--        android:layout_width="40dp"-->
+<!--        android:layout_height="27dp"-->
+<!--        android:layout_marginEnd="10dp"-->
+<!--        android:background="@drawable/whitebg_rounded"-->
+<!--        android:elevation="1dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/txtIsha"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/txtIsha"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/txtIsha" />-->
 
     <View
         android:id="@+id/cs"
@@ -599,65 +602,65 @@
         app:layout_constraintStart_toStartOf="@+id/view11"
         app:layout_constraintTop_toBottomOf="@+id/imgTitr" />
 
-    <ImageView
-        android:id="@+id/imgSound1"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:elevation="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cs1"
-        app:layout_constraintEnd_toEndOf="@+id/cs1"
-        app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="@+id/cs1"
-        app:layout_constraintTop_toTopOf="@+id/cs1"
-        app:srcCompat="@drawable/sound" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imgSound1"-->
+<!--        android:layout_width="25dp"-->
+<!--        android:layout_height="25dp"-->
+<!--        android:elevation="1dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/cs1"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/cs1"-->
+<!--        app:layout_constraintHorizontal_bias="0.466"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/cs1"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/cs1"-->
+<!--        app:srcCompat="@drawable/sound" />-->
 
-    <ImageView
-        android:id="@+id/imgSound2"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:elevation="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cs2"
-        app:layout_constraintEnd_toEndOf="@+id/cs2"
-        app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="@+id/cs2"
-        app:layout_constraintTop_toTopOf="@+id/cs2"
-        app:srcCompat="@drawable/sound" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imgSound2"-->
+<!--        android:layout_width="25dp"-->
+<!--        android:layout_height="25dp"-->
+<!--        android:elevation="1dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/cs2"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/cs2"-->
+<!--        app:layout_constraintHorizontal_bias="0.466"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/cs2"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/cs2"-->
+<!--        app:srcCompat="@drawable/sound" />-->
 
-    <ImageView
-        android:id="@+id/imgSound3"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:elevation="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cs3"
-        app:layout_constraintEnd_toEndOf="@+id/cs3"
-        app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="@+id/cs3"
-        app:layout_constraintTop_toTopOf="@+id/cs3"
-        app:srcCompat="@drawable/sound" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imgSound3"-->
+<!--        android:layout_width="25dp"-->
+<!--        android:layout_height="25dp"-->
+<!--        android:elevation="1dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/cs3"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/cs3"-->
+<!--        app:layout_constraintHorizontal_bias="0.466"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/cs3"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/cs3"-->
+<!--        app:srcCompat="@drawable/sound" />-->
 
-    <ImageView
-        android:id="@+id/imgSound4"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:elevation="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cs4"
-        app:layout_constraintEnd_toEndOf="@+id/cs3"
-        app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="@+id/cs4"
-        app:layout_constraintTop_toTopOf="@+id/cs4"
-        app:srcCompat="@drawable/sound" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imgSound4"-->
+<!--        android:layout_width="25dp"-->
+<!--        android:layout_height="25dp"-->
+<!--        android:elevation="1dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/cs4"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/cs3"-->
+<!--        app:layout_constraintHorizontal_bias="0.466"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/cs4"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/cs4"-->
+<!--        app:srcCompat="@drawable/sound" />-->
 
-    <ImageView
-        android:id="@+id/imgSound5"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:elevation="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cs5"
-        app:layout_constraintEnd_toEndOf="@+id/cs5"
-        app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="@+id/cs5"
-        app:layout_constraintTop_toTopOf="@+id/cs5"
-        app:srcCompat="@drawable/sound" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imgSound5"-->
+<!--        android:layout_width="25dp"-->
+<!--        android:layout_height="25dp"-->
+<!--        android:elevation="1dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/cs5"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/cs5"-->
+<!--        app:layout_constraintHorizontal_bias="0.466"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/cs5"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/cs5"-->
+<!--        app:srcCompat="@drawable/sound" />-->
 
     <View
         android:id="@+id/view2"
@@ -668,19 +671,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="286dp"
-        android:layout_height="20dp"
-        android:layout_marginBottom="10dp"
-        android:text="إن الصلاة كانت على المؤمنين كتابا موقوتا"
-        android:textAlignment="center"
-        android:textColor="#FFFDFD"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/view2"
-        app:layout_constraintEnd_toEndOf="@+id/view2"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/view2" />
+    <!--    <TextView-->
+    <!--        android:id="@+id/textView3"-->
+    <!--        android:layout_width="286dp"-->
+    <!--        android:layout_height="20dp"-->
+    <!--        android:layout_marginBottom="10dp"-->
+    <!--        android:text="إن الصلاة كانت على المؤمنين كتابا موقوتا"-->
+    <!--        android:textAlignment="center"-->
+    <!--        android:textColor="#FFFDFD"-->
+    <!--        android:visibility="gone"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/view2"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/view2"-->
+    <!--        app:layout_constraintHorizontal_bias="0.498"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/view2" />-->
 
     <TextView
         android:id="@+id/txtTimeNextSalat"

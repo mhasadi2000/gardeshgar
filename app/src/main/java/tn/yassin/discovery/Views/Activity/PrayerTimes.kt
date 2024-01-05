@@ -42,11 +42,7 @@ class PrayerTimes : AppCompatActivity() {
     private lateinit var txtNextSalat: TextView
     private lateinit var txtTimeNextSalat: TextView
     ////////////////////////////////////////////////
-    private lateinit var imgSound1: ImageView
-    private lateinit var imgSound2: ImageView
-    private lateinit var imgSound3: ImageView
-    private lateinit var imgSound4: ImageView
-    private lateinit var imgSound5: ImageView
+
     ///
     val Ready = ReadyFunc()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,12 +52,7 @@ class PrayerTimes : AppCompatActivity() {
         InitView()
         DayName()
         DynamicClock()
-        SearchPosition()
-        imgSoundClicked(imgSound1)
-        imgSoundClicked(imgSound2)
-        imgSoundClicked(imgSound3)
-        imgSoundClicked(imgSound4)
-        imgSoundClicked(imgSound5)
+
 
         ReadPositionData()
 
@@ -90,40 +81,10 @@ class PrayerTimes : AppCompatActivity() {
         txtTimeNextSalat = findViewById(R.id.txtTimeNextSalat)
         //RestTime = findViewById(R.id.RestTime)
         //////////////////////////////////////////
-        imgSound1 = findViewById(R.id.imgSound1)
-        imgSound2 = findViewById(R.id.imgSound2)
-        imgSound3 = findViewById(R.id.imgSound3)
-        imgSound4 = findViewById(R.id.imgSound4)
-        imgSound5 = findViewById(R.id.imgSound5)
+
     }
 
 
-    fun SearchPosition() {
-
-        val txtEsmDewla = findViewById<EditText>(R.id.txtEsmDewla)
-        val txtEsmWleya =  findViewById<EditText>(R.id.txtEsmWleya)
-        val btnSearch = findViewById<ImageView>(R.id.btnSearch)
-        btnSearch.setOnClickListener {
-            val Dewla = txtEsmDewla.text.toString()
-            val Wleya = txtEsmWleya.text.toString()
-            HideKeyboard(txtEsmDewla)
-            //LoadPrayTimeAsync(Wleya,Dewla)
-            SavePositionData(Dewla,Wleya)
-            if(Dewla.isEmpty() || Wleya.isEmpty()) {
-                Toast.makeText(applicationContext, "يجب ملئ المكان للبحث", Toast.LENGTH_LONG).show()
-            }
-            else{
-                if (Ready.isOnline(this)) {
-                    LoadPrayTimeAsync(Wleya,Dewla)
-                } else {
-                    val factory = LayoutInflater.from(this)
-                    val view: View = factory.inflate(R.layout.noconnection, null)
-                    val msg = CustomDialogs()
-                    msg.ShowDialogNoConnection(this, view)
-                }
-            }
-        }
-    }
 
     fun HideKeyboard(textView: EditText) {
         val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -146,22 +107,22 @@ class PrayerTimes : AppCompatActivity() {
     fun getdayName(): String {
         var day = java.util.Calendar.getInstance().get(java.util.Calendar.DAY_OF_WEEK);
         when (day) {
-            1 -> return "الأحد"
-            2 -> return "الاثنين"
-            3 -> return "الثلاثاء"
-            4 -> return "الأربعاء"
-            5 -> return "الخميس"
-            6 -> return "الجمعة"
-            7 -> return "السبت"
-            else -> return "الأحد"
+            1 -> return "یکشنبه"
+            2 -> return "دوشنبه"
+            3 -> return "سه شنبه"
+            4 -> return "چهارشنبه"
+            5 -> return "پنج شنبه"
+            6 -> return "جمعه"
+            7 -> return "شنبه"
+            else -> return "یکشنبه"
         }
     }
 
-    fun LoadPrayTimeAsync(Wleya :  String , Dewla: String  ) {
+    fun LoadPrayTimeAsync() {
 
         val client = AsyncHttpClient()
         val url =
-            "http://api.aladhan.com/v1/timingsByCity?city=" + Wleya + "&country=" + Dewla + "&method=8"
+            "http://api.aladhan.com/v1/timingsByCity?city=" + "Tehran" + "&country=" + "Iran" + "&method=8"
         client.get(url, object : JsonHttpResponseHandler() {
             @RequiresApi(Build.VERSION_CODES.O)
             override fun onSuccess(
@@ -188,11 +149,7 @@ class PrayerTimes : AppCompatActivity() {
                 /////////////////////////////////////////////::
                 ThenextSalatis(FajrResult, DhuhrResult, AsarResult, MaghrebResult, IshaResult)
                 /////////////////////////////////////////////::
-/*                itsTimeToPrayOrNot(txtFajr.text.toString())
-                itsTimeToPrayOrNot(txtDhuhr.text.toString())
-                itsTimeToPrayOrNot(txtAsar.text.toString())
-                itsTimeToPrayOrNot(txtMaghrib.text.toString())
-                itsTimeToPrayOrNot(txtIsha.text.toString())*/
+
             }
 
             override fun onFailure(
@@ -209,26 +166,16 @@ class PrayerTimes : AppCompatActivity() {
     }
 
 
-    fun SavePositionData(txtEsmDewla: String, txtEsmWleya: String) {
+    fun SavePositionData() {
         val sharedPreferences = getSharedPreferences("PrayTime", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
-        editor.putString("Dawla", txtEsmDewla)
-        editor.putString("Wileya", txtEsmWleya)
         editor.apply()
     }
 
     fun ReadPositionData() {
 
-        val txtEsmDewla = findViewById<EditText>(R.id.txtEsmDewla)
-        val txtEsmWleya =  findViewById<EditText>(R.id.txtEsmWleya)
-        val sharedPreferences = getSharedPreferences("PrayTime", Context.MODE_PRIVATE)
-        val Dawla = sharedPreferences.getString("Dawla", "")
-        val Wileya = sharedPreferences.getString("Wileya", "")
-        if(Dawla!!.isNotEmpty() && Wileya!!.isNotEmpty()) {
-            txtEsmDewla.setText(Dawla)
-            txtEsmWleya.setText(Wileya)
-            LoadPrayTimeAsync(Wileya,Dawla)
-        }
+        LoadPrayTimeAsync()
+
 
     }
 
@@ -241,27 +188,27 @@ class PrayerTimes : AppCompatActivity() {
         var NexTsalaT = ""
 
         if (currentDate <= Fajer || currentDate > Isha) {
-            txtNextSalat.setText("الفجر")
+            txtNextSalat.setText("صبح")
             txtTimeNextSalat.text = Fajer
             NexTsalaT = Fajer
         }
         if (currentDate > Fajer && currentDate <= Dhoher) {
-            txtNextSalat.setText("الضهر")
+            txtNextSalat.setText("ظهر")
             txtTimeNextSalat.text = Dhoher
             NexTsalaT = Dhoher
         }
         if (currentDate > Fajer && currentDate > Dhoher && currentDate <= Asar) {
-            txtNextSalat.setText("العصر")
+            txtNextSalat.setText("عصر")
             txtTimeNextSalat.text = Asar
             NexTsalaT = Asar
         }
         if (currentDate > Fajer && currentDate > Dhoher && currentDate > Asar && currentDate <= Moghreb) {
-            txtNextSalat.setText("المغرب")
+            txtNextSalat.setText("مغرب")
             txtTimeNextSalat.text = Moghreb
             NexTsalaT = Moghreb
         }
         if (currentDate > Fajer && currentDate > Dhoher && currentDate > Asar && currentDate > Moghreb && currentDate <= Isha) {
-            txtNextSalat.setText("العشاء")
+            txtNextSalat.setText("عشاء")
             txtTimeNextSalat.text = Isha
             NexTsalaT = Isha
         }
@@ -269,47 +216,6 @@ class PrayerTimes : AppCompatActivity() {
         //CalculateDiffTwoTimes(NexTsalaT)
     }
 
-    /* @SuppressLint("SimpleDateFormat")
-     @RequiresApi(Build.VERSION_CODES.O)
-     fun CalculateDiffTwoTimes(NexTsalaT: String) {
-
-         val Boucle = object : Thread() {
-             override fun run() {
-                 while (!isInterrupted) {
-                     try {
-                         runOnUiThread {
-                             ////////////////////////////////////////////////////////////
-                             val format = SimpleDateFormat("HH:mm:ss")
-                             val formatter = DateTimeFormatter.ofPattern("HH:mm:ss")
-                             val TimeNow = LocalDateTime.now().format(formatter)
-                             var TimeTaw: Date?
-                             TimeTaw = format.parse(TimeNow)
-
-                             val FajrWithSec: String = NexTsalaT + ":" + "00"
-                             var FajarSec: Date?
-                             FajarSec = format.parse(FajrWithSec)
-
-                             val diff: Long = FajarSec.getTime() - TimeTaw.getTime()
-                             val diffSeconds = diff / 1000
-                             val hours = diffSeconds / 3600
-                             val minutes = diffSeconds % 3600 / 60
-                             val seconds = diffSeconds % 60
-                             val timeString = String.format(
-                                 "%02d:%02d:%02d",
-                                 hours,
-                                 minutes,
-                                 seconds
-                             )
-                             RestTime.text = timeString
-                         }
-                     } catch (e: InterruptedException) {
-                         e.printStackTrace()
-                     }
-                 }
-             }
-         }
-         Boucle.start()
-     }*/
 
 
     fun imgSoundClicked(imgSound : ImageView)
@@ -326,40 +232,6 @@ class PrayerTimes : AppCompatActivity() {
         }
     }
 
-/*    @SuppressLint("SimpleDateFormat")
-    @RequiresApi(Build.VERSION_CODES.O)
-    fun itsTimeToPrayOrNot(salaT: String)
-    {
-          val boucle = object : Thread() {
-            override fun run() {
-                while (!isInterrupted) {
-                    try {
-                        sleep(1000)
-                        runOnUiThread {
-
-                            val sdf = SimpleDateFormat("hh:mm:ss")
-                            val currentDate = sdf.format(Date())
-                            ////
-                            val salaTWithSec: String = salaT + ":" + "00"
-
-                            if(currentDate.toString() == salaTWithSec)
-                            {
-                                PlayAdhan()
-                                println("Alllllaaaaho Akkbbbbbbbbeeeeerrrr")
-                            }
-                            println("TimeTaw "+currentDate.toString())
-                            println("salaTSec "+salaTWithSec)
-
-                        }
-                    } catch (e: InterruptedException) {
-                        e.printStackTrace()
-                    }
-                }
-            }
-        }
-        boucle.start()
-
-    }*/
 
 
     fun PlayAdhan() {

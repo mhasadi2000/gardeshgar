@@ -80,82 +80,56 @@ class RecommendedAdapter(var context: Context,val limit: Int) :
     override fun onBindViewHolder(holder: RecommendedViewHolder, @SuppressLint("RecyclerView") position: Int) {
         var data = filteredPostsList[position]
 
-        val ImagePlace = ("https://location-android-pr.storage.iran.liara.space/" + filteredPostsList[position].photo)
-        val imageUrl = "https://location-android-pr.storage.iran.liara.space/azadi.jpg"
+        val ImagePlace = ("https://location-android-pr.storage.iran.liara.space/"+filteredPostsList[position].photo)
+        //println("Imageeeee ==>>>>> "+ImagePlace)
+        /*        val NomPlace = filteredPostsList[position].nom
+                val Lieux = filteredPostsList[position].lieux
+                val RatingPlace = filteredPostsList[position].rate*/
+        Glide
+            .with(context)
+            .load(ImagePlace)
+            .fitCenter()
+            .into(holder.PicRecomm);
+        /*        //holder.PicRecomm.setImageResource(ImagePlace!!)
+                holder.PlaceName.text = NomPlace
+        //        holder.LieuxPlace.text = Lieux
+        //        holder.ratingBar.rating = RatingPlace!!.toFloat()*/
+        holder.itemView.setBackgroundColor(Color.parseColor("#FAFAFA"));
+        //animation Items RecyclerView
+        val animation =
+            AnimationUtils.loadAnimation(holder.itemView.context, R.anim.item_animation_fall_down)
+        //holder.itemView.setVisibility(View.VISIBLE)
+        holder.itemView.startAnimation(animation)
+        //
+        holder.itemView.setOnClickListener { //Show Popup With Information Hospitals
+            val preferences = PreferenceManager.getDefaultSharedPreferences(context)
+            val editor = preferences.edit()
+            editor.putString("IdPost", data.id)
+            editor.putString("ImagePlace", data.photo)
+            editor.putString("NomPlace", data.nom)
+            editor.putString("LieuxPlace", data.lieux)
+            editor.putString("DescriptionPlace", data.description)
+            editor.putString("RatingPlace", data.rate)
+            editor.apply()  //Save Data
+            //println("Ratteeeeeeeeeeeee "+data.getRate())
+            ///
+            PopUpDetails(holder.itemView)
 
-        // Load the image from the URL into the ImageView using Picasso
-        Picasso.get().load(imageUrl).into(object : Target {
-            override fun onBitmapLoaded(bitmap: Bitmap?, from: Picasso.LoadedFrom?) {
-                if (bitmap != null) {
-                    // Encode the loaded bitmap to Base64
-                    val base64String = encodeTobase64(bitmap)
-                    println("base bitmap loadeddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd")
-                    if (base64String != null) {
-                        // Perform actions when the image is loaded successfully
-                        val encodedImagess = base64String
-                        println(encodedImagess)
+            //ScreenShot
+            val fileOutputStream = ByteArrayOutputStream()
+            ReadyFunction.ScreenShot(holder.itemView)!!.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream)
+            val compressImage: ByteArray = fileOutputStream.toByteArray()
+            val sEncodedImage: String = Base64.encodeToString(compressImage, Base64.DEFAULT)
+            //println("sEncodedImage ===>>>>>> "+sEncodedImage)
+            val preferencess = PreferenceManager.getDefaultSharedPreferences(context)
+            val editorr = preferencess.edit()
+            editorr.putString("ScreenShotAdmin", sEncodedImage)
+            editorr.apply()  //Save Data
+        }
 
-                        // Set the image in the ViewHolder
-                        Glide.with(context)
-                            .load(ImagePlace)
-                            .fitCenter()
-                            .into(holder.PicRecomm)
-
-                        // Other data
-                        val NomPlace = filteredPostsList[position].nom
-                        val Lieux = filteredPostsList[position].lieux
-                        val RatingPlace = filteredPostsList[position].rate
-
-                        holder.PlaceName.text = NomPlace
-                        holder.LieuxPlace.text = Lieux
-                        holder.ratingBar.rating = RatingPlace!!.toFloat()
-                        holder.itemView.setBackgroundColor(Color.parseColor("#FAFAFA"));
-
-                        //animation Items RecyclerView
-                        val animation =
-                            AnimationUtils.loadAnimation(holder.itemView.context, R.anim.item_animation_fall_down)
-                        holder.itemView.startAnimation(animation)
-
-                        // Set onClickListener
-                        holder.itemView.setOnClickListener {
-                            val preferences = PreferenceManager.getDefaultSharedPreferences(context)
-                            val editor = preferences.edit()
-                            editor.putString("IdPost", data.id)
-                            editor.putString("ImagePlace", encodedImagess)
-                            editor.putString("NomPlace", data.nom)
-                            editor.putString("LieuxPlace", data.lieux)
-                            editor.putString("DescriptionPlace", data.description)
-                            editor.putString("RatingPlace", data.rate)
-                            editor.apply()  // Save Data
-
-                            // PopUpDetails should be called here
-                            PopUpDetails(holder.itemView)
-
-                            // ScreenShot
-                            val fileOutputStream = ByteArrayOutputStream()
-                            ReadyFunction.ScreenShot(holder.itemView)!!.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream)
-                            val compressImage: ByteArray = fileOutputStream.toByteArray()
-                            val sEncodedImage: String = Base64.encodeToString(compressImage, Base64.DEFAULT)
-                            println("sEncodedImage ===>>>>>> " + sEncodedImage)
-                            val preferencess = PreferenceManager.getDefaultSharedPreferences(context)
-                            val editorr = preferencess.edit()
-                            editor.putString("ImagePlace", sEncodedImage)
-                            editorr.putString("ScreenShotAdmin", sEncodedImage)
-                            editorr.apply()  // Save Data
-                        }
-                    }
-                }
-            }
-
-            override fun onBitmapFailed(e: Exception?, errorDrawable: Drawable?) {
-                // Handle the case where bitmap loading failed
-            }
-
-            override fun onPrepareLoad(placeHolderDrawable: Drawable?) {
-                // Optionally handle the case where the image is still loading
-            }
-        })
     }
+
+
     fun PopUpDetails(view: View) {
         PopUpDetailsPosts(view.context)
     }

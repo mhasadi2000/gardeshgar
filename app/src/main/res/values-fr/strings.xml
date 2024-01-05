@@ -20,7 +20,7 @@
     <string name="WhatdouWant">What are \nyou looking for ?</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="home">Home</string>
-    <string name="explorer">Explore</string>
+    <string name="explorer">Category</string>
     <string name="add">Add</string>
     <string name="favorite">Favorite</string>
     <string name="profile">Profile</string>

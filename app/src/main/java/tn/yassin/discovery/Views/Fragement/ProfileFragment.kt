@@ -93,25 +93,25 @@ class ProfileFragment : Fragment() {
     {
         val myPagerAdapter = MyPagerAdapter(requireActivity())
         viewpagerProfile.setAdapter(myPagerAdapter)
-        tabLayoutProfile.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                viewpagerProfile.setCurrentItem(tab!!.position)
-            }
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-            }
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-            }
-        })
+//        tabLayoutProfile.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+//            override fun onTabSelected(tab: TabLayout.Tab?) {
+//                viewpagerProfile.setCurrentItem(tab!!.position)
+//            }
+//            override fun onTabUnselected(tab: TabLayout.Tab?) {
+//            }
+//            override fun onTabReselected(tab: TabLayout.Tab?) {
+//            }
+//        })
         viewpagerProfile.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
-                tabLayoutProfile.getTabAt(position)!!.select();
-                if (position == 0) {
-                    // you are on the first page
-                }
-                else if (position == 1) {
-                    // you are on the second page
-                }
-                super.onPageSelected(position)
+//                tabLayoutProfile.getTabAt(position)!!.select();
+//                if (position == 0) {
+//                    // you are on the first page
+//                }
+//                else if (position == 1) {
+//                    // you are on the second page
+//                }
+//                super.onPageSelected(position)
             }
         })
     }
@@ -132,7 +132,7 @@ class ProfileFragment : Fragment() {
         btnEditProfile = requireView().findViewById(R.id.btnEditProfile)
         btnEditProfile.setBackgroundResource(R.drawable.btn_dark); // Set Button Style @Null on the xml
         //
-        tabLayoutProfile = requireView().findViewById(R.id.tabLayoutProfile)
+//        tabLayoutProfile = requireView().findViewById(R.id.tabLayoutProfile)
         viewpagerProfile = requireView().findViewById(R.id.view_pageProfile)
     }
 
@@ -175,25 +175,7 @@ class ProfileFragment : Fragment() {
         else{
             userAvatar.setImageResource(R.drawable.avatar)
         }
-        //  Set Verified Icon
-        //MyName.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_verified, 0);
-        //MyName.setCompoundDrawablePadding(0);
-        //
 
-/*        Glide.with(requireContext())
-            .load("https://raw.githubusercontent.com/bumptech/glide/master/static/glide_logo.png")
-            .listener(object : RequestListener<Drawable> {
-                override fun onLoadFailed(e: GlideException?, model: Any?, target: Target<Drawable>?, isFirstResource: Boolean): Boolean {
-                    //TODO: something on exception
-                    return false
-                }
-                override fun onResourceReady(resource: Drawable?, model: Any?, target: Target<Drawable>?, dataSource: DataSource?, isFirstResource: Boolean): Boolean {
-                    Log.d(TAG, "OnResourceReady")
-                    //do something when picture already loaded
-                    return false
-                }
-            })
-            .into(userAvatar)*/
     }
     fun SetToolbar()
     {
@@ -296,53 +278,6 @@ class ProfileFragment : Fragment() {
         })
     }
 
-
-//   @SuppressLint("Recycle")
-//    private fun multipartImageUpload() {
-//        //
-//        MySharedPref =
-//            requireContext().getSharedPreferences(PREF_NAME, AppCompatActivity.MODE_PRIVATE);
-//        val IdUser = MySharedPref.getString(IDUSER, null)
-//        val TokenUser = MySharedPref.getString(TOKENUSER, null)
-//        //
-//        val fileDir=context?.filesDir
-//        val file= File(fileDir,"image.jpg")
-//        val inputStream=context?.contentResolver?.openInputStream(imgUri!!)
-//        val outputStream= FileOutputStream(file)
-//        inputStream!!.copyTo(outputStream)
-//        val requestBody=file.asRequestBody("image/*".toMediaTypeOrNull())
-//        val image = MultipartBody.Part.createFormData("image", file.name,requestBody)
-//
-//        val idUser= IdUser.toString().trim().toRequestBody("text/plain".toMediaTypeOrNull())
-//        val tokenUser=TokenUser.toString().trim().toRequestBody("text/plain".toMediaTypeOrNull())
-//        //////////////
-//        try {
-//            val reqFile: RequestBody = RequestBody.create("image/*".toMediaTypeOrNull(), file)
-//            val body: MultipartBody.Part =
-//                MultipartBody.Part.createFormData("image", file.name, reqFile) // myfile
-//            val name: RequestBody = RequestBody.create("text/plain".toMediaTypeOrNull(), "image") //myfile
-//            var apiService: UserApi? = null
-//            val req: Call<ResponseBody> = apiService!!.postImage(body, name)
-//            req.enqueue(object : Callback<ResponseBody?> {
-//                override fun onResponse(call: Call<ResponseBody?>?, response: Response<ResponseBody?>) {
-//                    Log.e("Upload", java.lang.String.valueOf(response.body()))
-//                    if (response.code() === 200) {
-//                        Toast.makeText(requireContext(), "Uploaded Successfully!", Toast.LENGTH_SHORT).show()
-//                    }
-//                    Toast.makeText(requireContext(), response.code() , Toast.LENGTH_SHORT).show()
-//                }
-//                override fun onFailure(call: Call<ResponseBody?>?, t: Throwable) {
-//                    Toast.makeText(requireContext(), "Request failed", Toast.LENGTH_SHORT).show()
-//                    t.printStackTrace()
-//                    Log.e("ERROR", t.toString())
-//                }
-//            })
-//        } catch (e: FileNotFoundException) {
-//            e.printStackTrace()
-//        } catch (e: IOException) {
-//            e.printStackTrace()
-//        }
-//    }
 
 
     private fun openGallery() {

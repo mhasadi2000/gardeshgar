@@ -189,16 +189,17 @@
                 android:id="@+id/gifImageView2"
                 android:layout_width="85dp"
                 android:layout_height="85dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginBottom="5dp"
                 android:adjustViewBounds="true"
-                android:background="@drawable/game"
+                android:background="@drawable/icon_sport"
                 android:scaleType="fitXY"
 
                 android:src="@drawable/raduisimage"
                 app:layout_constraintBottom_toBottomOf="@+id/CadreBeach"
                 app:layout_constraintStart_toStartOf="@+id/CadreBeach"
                 app:layout_constraintTop_toTopOf="@+id/CadreBeach"
+                app:layout_constraintVertical_bias="1.0"
                 tools:ignore="MissingConstraints" />
 
             <pl.droidsonroids.gif.GifImageView
@@ -208,7 +209,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginBottom="5dp"
                 android:adjustViewBounds="true"
-                android:background="@drawable/park"
+                android:background="@drawable/icon_nature"
                 android:scaleType="fitXY"
 
                 android:src="@drawable/raduisimage"
@@ -225,7 +226,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginBottom="5dp"
                 android:adjustViewBounds="true"
-                android:background="@drawable/gif_culturee"
+                android:background="@drawable/icon_history"
                 android:scaleType="fitXY"
                 android:src="@drawable/raduisimage"
                 app:layout_constraintBottom_toBottomOf="@+id/CadreCulture"
@@ -241,7 +242,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginBottom="5dp"
                 android:adjustViewBounds="true"
-                android:background="@drawable/gif_food"
+                android:background="@drawable/icon_restau"
                 android:scaleType="fitXY"
                 android:src="@drawable/raduisimage"
                 app:layout_constraintBottom_toBottomOf="@+id/CadreSport"
@@ -257,7 +258,7 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginBottom="5dp"
                 android:adjustViewBounds="true"
-                android:background="@drawable/market"
+                android:background="@drawable/icon_arts"
                 android:scaleType="fitXY"
                 android:src="@drawable/raduisimage"
                 app:layout_constraintBottom_toBottomOf="@+id/CadreArt"
@@ -380,7 +381,7 @@
                 android:layout_height="85dp"
                 android:layout_marginStart="5dp"
                 android:adjustViewBounds="true"
-                android:background="@drawable/religen"
+                android:background="@drawable/mosq"
                 android:scaleType="fitXY"
 
                 android:src="@drawable/raduisimage"
@@ -558,6 +559,92 @@
 <!--                    <include layout="@layout/shimmer_explore" />-->
                 </LinearLayout>
             </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="مذهبی"
+                app:layout_constraintBottom_toTopOf="@+id/gifImageView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.145"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gifImageView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="برجسته"
+                app:layout_constraintBottom_toTopOf="@+id/gifImageView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.145"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gifImageView2"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="طبیعت"
+                app:layout_constraintBottom_toTopOf="@+id/gifImageView4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.145"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gifImageView3"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="تاریخی"
+                app:layout_constraintBottom_toTopOf="@+id/gifImageView5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.145"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gifImageView4"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="رستوران"
+                app:layout_constraintBottom_toTopOf="@+id/gifImageView6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.145"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gifImageView5"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="فروشگاه"
+                app:layout_constraintBottom_toTopOf="@+id/gifImageView7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.145"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gifImageView6"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="حومه"
+
+                app:layout_constraintBottom_toTopOf="@+id/button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.157"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gifImageView7"
+                app:layout_constraintVertical_bias="1.0" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

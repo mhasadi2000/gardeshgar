@@ -10,46 +10,46 @@ class ListCategory {
 
     fun initListCategory()
     {
+//        ListCategory.add(
+//            Category(
+//                NomCategory = "مذهبی",
+//                IconCategory = R.drawable.mosq
+//            )
+//        )
         ListCategory.add(
             Category(
-                NomCategory = "Plage",
-                IconCategory = R.drawable.icon_beach
-            )
-        )
-        ListCategory.add(
-            Category(
-                NomCategory = "Culture",
-                IconCategory = R.drawable.icon_history
-            )
-        )
-        ListCategory.add(
-            Category(
-                NomCategory = "Desert",
-                IconCategory = R.drawable.icon_sahara
-            )
-        )
-        ListCategory.add(
-            Category(
-                NomCategory = "Arts",
-                IconCategory = R.drawable.icon_arts
-            )
-        )
-        ListCategory.add(
-            Category(
-                NomCategory = "Food",
-                IconCategory = R.drawable.icon_restau
-            )
-        )
-        ListCategory.add(
-            Category(
-                NomCategory = "Activite",
+                NomCategory = "برجسته",
                 IconCategory = R.drawable.icon_sport
             )
         )
         ListCategory.add(
             Category(
-                NomCategory = "Nature",
+                NomCategory = "طبیعت",
                 IconCategory = R.drawable.icon_nature
+            )
+        )
+        ListCategory.add(
+            Category(
+                NomCategory = "تاریخی",
+                IconCategory = R.drawable.icon_history
+            )
+        )
+        ListCategory.add(
+            Category(
+                NomCategory = "رستوران",
+                IconCategory = R.drawable.icon_restau
+            )
+        )
+        ListCategory.add(
+            Category(
+                NomCategory = "فروشگاه",
+                IconCategory = R.drawable.icon_arts
+            )
+        )
+        ListCategory.add(
+            Category(
+                NomCategory = "حومه",
+                IconCategory = R.drawable.icon_sahara
             )
         )
     }

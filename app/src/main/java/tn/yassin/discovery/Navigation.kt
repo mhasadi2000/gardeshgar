@@ -50,15 +50,15 @@ class Navigation : AppCompatActivity() {
                     toolbar.visibility = View.GONE
                     selectedFragment = ExploreFragmenttodo()
                 }
-                R.id.nav_add -> {
-                    toolbar.visibility = View.GONE
-                    BottomNavigationView.visibility = View.GONE
-                    selectedFragment = AddFragment()
-                }
-                R.id.nav_favorite -> {
-                    toolbar.visibility = View.VISIBLE
-                    selectedFragment = FavoriteFragment()
-                }
+//                R.id.nav_add -> {
+//                    toolbar.visibility = View.GONE
+//                    BottomNavigationView.visibility = View.GONE
+//                    selectedFragment = AddFragment()
+//                }
+//                R.id.nav_favorite -> {
+//                    toolbar.visibility = View.VISIBLE
+//                    selectedFragment = FavoriteFragment()
+//                }
                 R.id.nav_profile -> {
                     toolbar.visibility = View.GONE
                     refresh()

@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="3dp"
-            android:text="Dar Midoun Plage"
+            android:text="تهران"
             android:textColor="#313C7C"
             android:textSize="10sp"
             android:textStyle="bold"
@@ -70,7 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="bottom"
-                    android:text="Djerba"
+                    android:text="تهران"
                     android:textColor="#777474"
                     android:textSize="10sp" />
 

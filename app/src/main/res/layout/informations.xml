@@ -50,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="85dp"
                 android:gravity="center"
-                android:text="يحتاج التطبيق للأتصال بالإنترنت عند كل فتح للتطبيق لتحديث اوقات الصلاة وعند القيام ببحث في مكان جديد"
+                android:text="اطلاعات اوقات شرعی استان تهران را مشاهده کنید"
                 android:textColor="#93989C"
                 android:textSize="16sp"
                 android:textStyle="bold" />

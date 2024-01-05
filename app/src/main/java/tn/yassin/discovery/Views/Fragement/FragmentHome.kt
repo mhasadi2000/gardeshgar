@@ -55,10 +55,10 @@ class FragmentHome : Fragment() {
     //val ListRecommended = ListRecommended()
     //
     var PostsModels: ArrayList<PostsAdmin> = ArrayList()
-    lateinit var mShimmerViewContainer: ShimmerFrameLayout
+//    lateinit var mShimmerViewContainer: ShimmerFrameLayout
     lateinit var ShowMoreHome: TextView
     lateinit var txtRecomm:TextView
-lateinit var  imgMosque: ImageView
+    lateinit var  imgMosque: ImageView
     //
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -71,7 +71,7 @@ lateinit var  imgMosque: ImageView
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         //
         initView(view);
-        OpenSearch();
+//        OpenSearch();
         //Check()
         ///
         recylcerCategory = view.findViewById(R.id.recyclerCategory)
@@ -81,28 +81,28 @@ lateinit var  imgMosque: ImageView
         ListCategory.initListCategory()
         ///
         //ListRecommended.initListRecommended()
-        recylcerAdapterCategory = CategoryAdapter(requireContext(),ListCategory.ListCategory as ArrayList<Category>)
-        recylcerCategory.adapter = recylcerAdapterCategory
-        recylcerCategory.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+//        recylcerAdapterCategory = CategoryAdapter(requireContext(),ListCategory.ListCategory as ArrayList<Category>)
+//        recylcerCategory.adapter = recylcerAdapterCategory
+//        recylcerCategory.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         ////
 
         recylcerRecommended.setLayoutManager(StaggeredGridLayoutManager(2, 1))
-        AdapterRecommended = RecommendedAdapter(requireContext(),5)
+        AdapterRecommended = RecommendedAdapter(requireContext(),32)
         recylcerRecommended.adapter = AdapterRecommended
 
 
-       // ShowPostsRecommended()
+        // ShowPostsRecommended()
 
         ShowAllPostRecomm()
         //
-        mShimmerViewContainer = view.findViewById(R.id.shimmer_view_container);
+//        mShimmerViewContainer = view.findViewById(R.id.shimmer_view_container);
 
         ShowMoreHome.setOnClickListener{
             //
             val progressDialog = ProgressDialog(context,R.style.DialogStyle)
-           // progressDialog.setTitle("Loading")
+            // progressDialog.setTitle("Loading")
             //progressDialog.getWindow()!!.setBackgroundDrawable(ColorDrawable(Color.GRAY));
-            progressDialog.setMessage("Please wait \uD83D\uDE07")
+            progressDialog.setMessage("Please wait")
             progressDialog.getWindow()?.getAttributes()?.gravity = Gravity.BOTTOM;
             //progressDialog.setProgressStyle(android.R.attr.progressBarStyleInverse);
             progressDialog.setCancelable(true)
@@ -122,12 +122,12 @@ lateinit var  imgMosque: ImageView
             handler.postDelayed(runnable, 3000)
         }
 
-/*        val handler = Handler()
-        val runnable = Runnable { //Second fragment after 1 seconds appears
-            val Nb: Int = AdapterRecommended.getItemCount()
-            txtRecomm.text= "Recommended "+ "("+Nb.toString()+")"
-        }
-        handler.postDelayed(runnable, 2000)*/
+        /*        val handler = Handler()
+                val runnable = Runnable { //Second fragment after 1 seconds appears
+                    val Nb: Int = AdapterRecommended.getItemCount()
+                    txtRecomm.text= "Recommended "+ "("+Nb.toString()+")"
+                }
+                handler.postDelayed(runnable, 2000)*/
         imgMosque = view.findViewById(R.id.imgMosque);
         imgMosque.setOnClickListener {
             activity?.let{
@@ -170,7 +170,7 @@ lateinit var  imgMosque: ImageView
     }
 
     fun initView(view: View) {
-        searchView = view.findViewById(R.id.searchViewHome)
+//        searchView = view.findViewById(R.id.searchViewHome)
         ShowMoreHome = view.findViewById(R.id.ShowMoreHome)
         txtRecomm = view.findViewById(R.id.txtRecomm)
     }
@@ -185,40 +185,16 @@ lateinit var  imgMosque: ImageView
     ///
 
     fun ShowAllPostRecomm() {
-        val retrofi: Retrofit = retrofit.getInstance()
-        val service: AdminApi = retrofi.create(AdminApi::class.java)
-        val call: Call<List<PostsAdmin>> = service.PostSortedbyRate()
-        call.enqueue(object : Callback<List<PostsAdmin>> {
-            override fun onResponse(call: Call<List<PostsAdmin>>, response: Response<List<PostsAdmin>>) {
-//                PostsModels = ArrayList(response.body())
-                PostsModels = PostData.fetchPostsModels()
+        PostsModels = PostData.fetchPostsModels()
 
-                AdapterRecommended.setDataList(PostsModels)
-                AdapterRecommended.notifyDataSetChanged()
-                // Stopping Shimmer Effect's animation after data is loaded to ListView
-                mShimmerViewContainer.stopShimmerAnimation();
-                mShimmerViewContainer.setVisibility(View.GONE);
-                //
-                val Nb: Int = AdapterRecommended.itemCount
-                txtRecomm.text= "Recommended "+ "("+Nb.toString()+")"
-            }
+        AdapterRecommended.setDataList(PostsModels)
+        AdapterRecommended.notifyDataSetChanged()
+        // Stopping Shimmer Effect's animation after data is loaded to ListView
 
-            @SuppressLint("RestrictedApi")
-            override fun onFailure(call: Call<List<PostsAdmin>>, t: Throwable) {
-                println("Message :" + t.stackTrace)
-                Log.d("***", "Opppsss" + t.message)
-            }
-        })
+        //
+        val Nb: Int = AdapterRecommended.itemCount
+        txtRecomm.text= "اماکن گردشگری استان تهران "//+ "("+Nb.toString()+")"
     }
 
-    override fun onResume() {
-        super.onResume()
-        mShimmerViewContainer.startShimmerAnimation()
-    }
-
-     override fun onPause() {
-        mShimmerViewContainer.stopShimmerAnimation()
-        super.onPause()
-    }
 
 }

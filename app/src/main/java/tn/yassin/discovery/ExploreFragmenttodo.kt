@@ -115,14 +115,7 @@ class ExploreFragmenttodo : Fragment() {
         AdapterRecommendedFood = ExploreCategoryAdapter(requireContext())
         RecyclerFood.adapter = AdapterRecommendedFood
         ShowPostsFood("Food")
-        //
-//        shimmer_exploreDesert = view.findViewById(R.id.shimmer_exploreDesert)
-//        shimmer_explorePlage = view.findViewById(R.id.shimmer_explorePlage)
-//        shimmer_exploreNature = view.findViewById(R.id.shimmer_exploreNature)
-//        shimmer_exploreCulture = view.findViewById(R.id.shimmer_exploreCulture)
-//        shimmer_exploreSport = view.findViewById(R.id.shimmer_exploreSport)
-//        shimmer_exploreArt = view.findViewById(R.id.shimmer_exploreArt)
-//        shimmer_exploreFood = view.findViewById(R.id.shimmer_exploreFood)
+
 
 
     }
@@ -246,26 +239,6 @@ class ExploreFragmenttodo : Fragment() {
         scrollView.postDelayed({ scrollView.smoothScrollTo(0, childView.bottom) }, delay)
     }
 
-//    override fun onResume() {
-//        super.onResume()
-////        shimmer_exploreDesert.startShimmerAnimation()
-////        shimmer_explorePlage.startShimmerAnimation()
-//        shimmer_exploreNature.startShimmerAnimation()
-//        shimmer_exploreCulture.startShimmerAnimation()
-//        shimmer_exploreSport.startShimmerAnimation()
-//        shimmer_exploreArt.startShimmerAnimation()
-//        shimmer_exploreFood.startShimmerAnimation()
-//    }
 
-//    override fun onPause() {
-////        shimmer_exploreDesert.stopShimmerAnimation()
-////        shimmer_explorePlage.stopShimmerAnimation()
-//        shimmer_exploreNature.stopShimmerAnimation()
-//        shimmer_exploreCulture.stopShimmerAnimation()
-//        shimmer_exploreSport.stopShimmerAnimation()
-//        shimmer_exploreArt.stopShimmerAnimation()
-//        shimmer_exploreFood.stopShimmerAnimation()
-//        super.onPause()
-//    }
 }
 

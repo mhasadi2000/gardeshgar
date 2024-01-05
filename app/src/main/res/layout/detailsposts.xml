@@ -111,7 +111,7 @@
 
                     <TextView
                         android:id="@+id/DetailsMap"
-                        android:layout_width="150dp"
+                        android:layout_width="200dp"
                         android:layout_height="match_parent"
                         android:background="@color/Redfate7"
                         android:gravity="center"
@@ -121,7 +121,7 @@
 
                     <TextView
                         android:id="@+id/DetailsShare"
-                        android:layout_width="150dp"
+                        android:layout_width="206dp"
                         android:layout_height="match_parent"
                         android:background="#15C39A"
                         android:gravity="center"

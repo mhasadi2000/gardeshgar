@@ -21,7 +21,7 @@
         android:layout_marginBottom="212dp"
         android:contentDescription="LOGO"
         android:scaleType="fitXY"
-        android:src="@drawable/logo_tehran"
+        android:src="@drawable/logo_tehran_g"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
