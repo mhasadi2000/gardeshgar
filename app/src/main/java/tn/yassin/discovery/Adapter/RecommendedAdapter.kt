@@ -82,18 +82,18 @@ class RecommendedAdapter(var context: Context,val limit: Int) :
 
         val ImagePlace = ("https://location-android-pr.storage.iran.liara.space/"+filteredPostsList[position].photo)
         //println("Imageeeee ==>>>>> "+ImagePlace)
-        /*        val NomPlace = filteredPostsList[position].nom
-                val Lieux = filteredPostsList[position].lieux
-                val RatingPlace = filteredPostsList[position].rate*/
+        val NomPlace = filteredPostsList[position].nom
+        val Lieux = filteredPostsList[position].lieux
+        val RatingPlace = filteredPostsList[position].rate
         Glide
             .with(context)
             .load(ImagePlace)
             .fitCenter()
             .into(holder.PicRecomm);
-        /*        //holder.PicRecomm.setImageResource(ImagePlace!!)
+                //holder.PicRecomm.setImageResource(ImagePlace!!)
                 holder.PlaceName.text = NomPlace
-        //        holder.LieuxPlace.text = Lieux
-        //        holder.ratingBar.rating = RatingPlace!!.toFloat()*/
+                holder.LieuxPlace.text = Lieux
+                holder.ratingBar.rating = RatingPlace!!.toFloat()
         holder.itemView.setBackgroundColor(Color.parseColor("#FAFAFA"));
         //animation Items RecyclerView
         val animation =
