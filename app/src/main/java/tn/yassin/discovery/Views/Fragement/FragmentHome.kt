@@ -87,7 +87,7 @@ class FragmentHome : Fragment() {
         ////
 
         recylcerRecommended.setLayoutManager(StaggeredGridLayoutManager(2, 1))
-        AdapterRecommended = RecommendedAdapter(requireContext(),32)
+        AdapterRecommended = RecommendedAdapter(requireContext(),34)
         recylcerRecommended.adapter = AdapterRecommended
 
 
